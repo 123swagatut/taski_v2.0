@@ -5,3 +5,9 @@ def show_tasks(tasks):
         print("\n--- Текущие задачи ---")
         for i, item in enumerate(tasks, 1):
             print(f"{i}. {item['task']} [Приоритет: {item['priority']}]")
+
+def add_task(tasks):
+    name = input("Введите описание задачи: ")
+    priority = input("Введите приоритет (высокий/средний/низкий): ")
+    tasks.append({"task": name, "priority": priority})
+    print("Задача добавлена!")
